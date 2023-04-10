@@ -3,10 +3,12 @@ from Models.Purchase import Purchase
 
 class PurchaseRepository:
 
-    PurchaseDB: List[Purchase]
+    
 
     def __init__(self,purchaseDBInput: List[Purchase]):
         self.PurchaseDB = purchaseDBInput
+        print(type(self.PurchaseDB))
+        print("repository created")
         
     def getAllItems(self):
         return self.PurchaseDB

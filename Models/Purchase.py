@@ -9,11 +9,11 @@ class Purchase:
         self._centroComercial = centroComercial
     
     def __str__(self):
-        centroComercialL = self._centroComercial + (" " * 100)
-        centroComercialL = centroComercialL[:100]
-        purchaseDateL = str(self._purchaseDate) + (" " * 20)
-        purchaseDateL = purchaseDateL[:20]
-        imagePathL = self._imagePath + (" "* 300)
-        imagePathL = imagePathL[:300]
+        centroComercialL = self._centroComercial + (" " * 30)
+        centroComercialL = centroComercialL[:30]
+        purchaseDateL = str(self._purchaseDate) + (" " * 10)
+        purchaseDateL = purchaseDateL[:10]
+        imagePathL = self._imagePath + (" "* 100)
+        imagePathL = imagePathL[:100]
         
         return centroComercialL + "\t" + purchaseDateL + "\t" + imagePathL

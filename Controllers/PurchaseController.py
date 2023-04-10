@@ -6,7 +6,7 @@ class PurchaseController:
     
     def __init__(self,service :PurchaseService):
         self.pService = service
-        self.pView = PurchaseViews
+        self.pView = PurchaseViews()
         
     def Index(self):
         self.pView.index(self.pService.getPurchases())
