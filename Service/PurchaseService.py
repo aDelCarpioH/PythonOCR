@@ -36,13 +36,11 @@ class PurchaseService:
                 purchaseItem.listItemsDescartados.append(linea)
 
     def processLine(self, linea):
-            lineaSplit = linea.split("$")
-            producto = lineaSplit[0]
-            precio = float(lineaSplit[1].split(" ")[0])
-            # total += precio
-            # cantidad += 1
-            pI = Item(producto, precio)
-            return pI
+        lineaSplit = linea.split("$")
+        producto = lineaSplit[0]
+        precio = float(lineaSplit[1].split(" ")[0])
+        pI = Item(producto, precio)
+        return pI
             
     def getPurchases(self):
         return self.Repository.getAllItems()
@@ -50,27 +48,3 @@ class PurchaseService:
     
     def getPurchaseItem(self,index):
         return self.Repository.getItem(index)
-    
-    # def showItems(self):
-    #     index = 0
-    #     for iItem in self.Purchase.listItems:
-    #         print(index,". ",iItem)
-            
-    # def showUnknowItems(self):
-    #     index = 0
-    #     for iItem in self.listItemsDescartados:
-    #         print(index,". ",iItem)
-    
-    # def showItemsWithoutProcess(self):
-    #     index = 0
-    #     for iItem in self.listItemsWithoutProcess:
-    #         print(index,". ",iItem)
-            
-    # def getUnknowItem(self,index):
-    #     return self.Purchase.listItemsDescartados[index]
-    
-    # def getItemsWithoutProcess(self,index):
-    #     return self.Purchase.listItemsWithoutProcess[index]
-    
-    # def getItem(self,index):
-    #     return self.Purchase.listItems[index]
